@@ -1,5 +1,6 @@
 import numpy as np
 import csv
+import cv2
 
 # Convert image data to numpy arrays and store for convenience
 # Input: path: string where data is stored
