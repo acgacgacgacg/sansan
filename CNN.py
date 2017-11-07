@@ -16,9 +16,9 @@ def cnn(x, y):
     net = slim.conv2d(net, 96, [5,5], scope='conv2')
     net = slim.max_pool2d(net, [2,2], scope='pool2')
     net = slim.flatten(net, scope='flatten')
-    net = slim.fully_connected(net, 512, scope='fully_connected1')
+    net = slim.fully_connected(net, 512, scope='fully_connected3')
     logits = slim.fully_connected(net, 9,
-            activation_fn=None, scope='fully_connected2')
+            activation_fn=None, scope='fully_connected4')
 
     prob = slim.softmax(logits)
     loss = slim.losses.softmax_cross_entropy(logits, y)
